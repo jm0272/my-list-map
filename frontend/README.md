@@ -66,3 +66,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+***
+
+## backend 설치패키지 및 실행
+* yarn init
+  * Enter ...
+
+* yarn add koa
+
+* yarn global add eslint
+* yarn add eslint
+* eslint --init
+
+* yarn add --dev nodemon
+  * prod : yarn start
+  * dev : yarn start:dev
+
+* yarn add koa-router
