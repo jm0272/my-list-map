@@ -14,5 +14,7 @@
 
 * yarn add koa-router
 
+* yarn add koa-bodyparser
+
 
 ## frontend 추가 라이브러리
