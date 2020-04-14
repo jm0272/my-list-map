@@ -17,4 +17,10 @@
 * yarn add koa-bodyparser
 
 
+
+* monggoDB 인스톨러 다운로드 사이트
+https://www.mongodb.com/download-center/community?jmp=homepage
+
+* yarn add mongoose dotenv
+
 ## frontend 추가 라이브러리
