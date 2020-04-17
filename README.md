@@ -27,4 +27,6 @@ https://www.mongodb.com/download-center/community?jmp=homepage
 
 * yarn add joi
 
+* Robo 3T 설치 https://robomongo.org/download
+
 ## frontend 추가 라이브러리
