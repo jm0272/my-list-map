@@ -23,4 +23,8 @@ https://www.mongodb.com/download-center/community?jmp=homepage
 
 * yarn add mongoose dotenv
 
+* yarn add --dev cross-env
+
+* yarn add joi
+
 ## frontend 추가 라이브러리
