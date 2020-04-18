@@ -23,7 +23,7 @@ https://www.mongodb.com/download-center/community?jmp=homepage
 
 * yarn add mongoose dotenv
 
-* yarn add --dev cross-env
+* yarn add cross-env
 
 * yarn add joi
 
