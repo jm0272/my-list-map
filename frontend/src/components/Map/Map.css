@@ -1,0 +1,15 @@
+.conten_map {
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 20px; */
+
+  flex: 1;
+
+  /* Extra Styles: */
+  padding: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  background: #eeeeee;
+}

@@ -1,0 +1,33 @@
+.header-layout {
+  /* height: 50px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background: #cccccc;
+  position: fixed; */
+
+  position: sticky;
+  top: 0;
+
+  /* Extra Styles: */
+  background: #9998fb;
+  padding: 0.5rem;
+}
+
+.navbar {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px; */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: white;
+}
