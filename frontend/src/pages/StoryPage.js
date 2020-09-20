@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Story from "../components/Story";
+
+//import Story from "../components/Story";
+import StoryContainer from "../containers/StoryContainer.js";
 import Layout from "../components/Layout";
 
 // class Story extends Component {
@@ -20,7 +22,7 @@ const StoryPage = () => {
   return (
     <Layout>
       <Header></Header>
-      <Story></Story>
+      <StoryContainer></StoryContainer>
       <Footer></Footer>
     </Layout>
   );

@@ -94,7 +94,7 @@
 // }
 
 import React, { Component } from "react";
-import "./Header.css";
+import "./Header.scss";
 import MenuIcon from "@material-ui/icons/Menu";
 
 class Header extends Component {

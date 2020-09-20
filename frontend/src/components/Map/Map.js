@@ -1,30 +1,37 @@
 import React, { Component } from "react";
-import "./Map.css";
+import $scriptjs from 'scriptjs';
+import "./Map.scss";
 
 // class Map extends Component {
 //   render() {
 //     return <div>Map Area</div>;
 //   }
 // }
+const { kakao } = window;
 
-const Map = () => {
-  const dataList = [];
+class Map extends Component{
 
-  for (let i = 0; i < 20; i++) {
-    dataList.push("data" + i);
+  constructor(props) {
+    super();
   }
 
-  console.log('dataList ', dataList);
+  componentDidMount(){
+    console.log('kakao', kakao);
+    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(35.157588, 129.058822), //지도의 중심좌표.
+        level: 4 //지도의 레벨(확대, 축소 정도)
+    };
+    this.map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+  }
 
-  return (
-    <div className="content_map">
-      {
-        dataList.map(
-          (item) => (<div>item</div>)
-        )
-      }
-    </div>
-  );
+  render () {
+    return (
+      <div className="content_map">
+        <div id="map" className="map_area"></div>
+      </div>
+    );
+  }
 };
 
 export default Map;
