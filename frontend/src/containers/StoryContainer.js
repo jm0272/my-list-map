@@ -8,54 +8,42 @@ import { bindActionCreators } from 'redux';
 class StoryContainer extends Component{
 
   handleModifyStory = (id, story) => {
-    console.log('handleModifyStory call', id, story);
-    // const { storyAction } = this.props;
-    // storyAction.modifyStory(id, story);
-    const { modifyStory } = this.props;
-    modifyStory(id, story);
+    const { storyAction } = this.props;
+    storyAction.modifyStory(id, story);
   }
 
   handleDeleteStory = (id) => {
-    console.log('handleDeleteStory call', id);
-    // const { storyAction } = this.props;
-    // storyAction.deleteStory(id);
-    const { deleteStory } = this.props;
-    deleteStory(id);
+    const { storyAction } = this.props;
+    storyAction.deleteStory(id);
+  }
+
+  handleDetailPopup = (story) => {
+    const { storyAction } = this.props;
+    storyAction.showDetailPopup(story);
   }
 
   render() {
     const { storyList } = this.props;
-    const { handleModifyStory, handleDeleteStory } = this;
+    const { handleModifyStory, handleDeleteStory, handleDetailPopup } = this;
 
     return (
       <Story
         storyList = {storyList}
         onModifyStory = {handleModifyStory}
         onDeleteStory = {handleDeleteStory}
+        onDetailPopup = {handleDetailPopup}
       >  
       </Story>
     )
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   storyList : state.storyList
-// });
-
-const mapStateToProps = (state) => {
-  console.log('state ::: ', state);
-  return {
-    storyList : state.storyList
-  }
-}
-
-// const mapDispatchToProps = (dispatch) => ({
-//   storyAction : bindActionCreators(actions, dispatch)
-// });
+const mapStateToProps = (state) => ({
+  storyList : state.storyList,
+});
 
 const mapDispatchToProps = (dispatch) => ({
-  modifyStory : (id, story) => (dispatch(actions.modifyStory(id, story))),
-  deleteStory : (id) => (dispatch(actions.deleteStory(id)))
+  storyAction : bindActionCreators(actions, dispatch)
 });
 
 export default connect(

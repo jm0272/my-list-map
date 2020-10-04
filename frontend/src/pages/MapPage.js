@@ -4,18 +4,6 @@ import Footer from "../components/Footer";
 import Map from "../components/Map";
 import Layout from "../components/Layout";
 
-// class Story extends Component {
-//   render() {
-//     return (
-//       <div>
-//         Story 영역
-//         <input type="text"></input>
-//         <div></div>
-//       </div>
-//     );
-//   }
-// }
-
 const MapPage = () => {
   return (
     <Layout>

@@ -17,11 +17,13 @@
   display: flex;
   flex-direction: column; 
   justify-content: flex-start;
-  
 }
 
 .story_item {
-  background-color: bisque;
+  border-style: groove;
+  border-radius: 25px;
+  border-width: 2px;
+  margin: 10px;
   padding: 10px 5px 10px 5px;
   text-align: center;
   /* padding-top: 10px; */

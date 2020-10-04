@@ -1,6 +1,15 @@
 
 import * as types from './actionTypes';
 
+export const showDetailPopup = (story) => ({
+  type : types.SHOW_DETAIL_POPUP,
+  story
+});
+
+export const hideDetailPopup = () => ({
+  type : types.HIDE_DETAIL_POPUP,
+});
+
 export const setStoryContent = (content) => ({
   type : types.SET_STORY_CONTENT,
   content
