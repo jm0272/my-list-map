@@ -1,3 +1,18 @@
+.search_map {
+  margin: 10px;
+  text-align: center;
+
+  input {
+    width: 60%;
+    margin-right: 10px;
+  }
+
+  button {
+    width: 20%;
+  }
+}
+
+
 .content_map {
   /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,18 +30,6 @@
 
 .map_area {
   //width: 80px;
-  height: 600px;
+  height: 400px;
   border-style: groove;
-}
-
-.search_map {
-  margin : 10px;
-  text-align: center;
-  input {
-    width : 60%;
-    margin-right: 10px;
-  }
-  button {
-    width : 20%;
-  }
 }

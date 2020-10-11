@@ -9,6 +9,13 @@ class Map extends Component{
 
   constructor(props) {
     super();
+
+    //console.log('constructor >>', props);
+    // this.mapList = props.mapList;
+    //this.mapSearch = props.mapSearch;
+    // this.onChangeSearch = props.onChangeSearch;
+    // this.onSearchMap = props.onSearchMap;
+
   }
 
   componentDidMount() {
@@ -16,8 +23,7 @@ class Map extends Component{
   }
 
   // 카카오지도 초기화
-  setKakaoMap() {
-    //let { map } = this;
+  setKakaoMap = () => {
 
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
@@ -45,17 +51,21 @@ class Map extends Component{
 
   }
 
-  handleSearch() {
-    const { mapSearch } = this.props;
+  handleSearch = (mapSearch) => {
+    const input = this.props.mapSearch;
 
+    if(input === '' || input === null){
+      alert('검색어를 입력하세요');
+      return false;
+    }
     // 장소 검색 객체를 생성합니다
     const ps = new kakao.maps.services.Places(); 
 
     // 키워드로 장소를 검색합니다
-    ps.keywordSearch(mapSearch, this.placesSearchCB); 
+    ps.keywordSearch(input, this.placesSearchCB); 
   }
 
-  placesSearchCB (data, status, pagination) {
+  placesSearchCB = (data, status, pagination) => {
     if (status === kakao.maps.services.Status.OK) {
 
         // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
@@ -75,7 +85,7 @@ class Map extends Component{
   }
 
   // 지도에 마커를 표시하는 함수입니다
-  displayMarker(place) {
+  displayMarker = (place) => {
     var infowindow = new kakao.maps.InfoWindow({zIndex:1});      
 
     // 마커를 생성하고 지도에 표시합니다
@@ -93,13 +103,17 @@ class Map extends Component{
   }
 
   render () {
+    console.log('render this', this);
     const { mapSearch, onChangeSearch, onSearchMap } = this.props;
+    const { handleSearch } = this; 
 
     return (
       <div>
         <div className="search_map">
           <input type="text" onChange={onChangeSearch} value={mapSearch}></input>
-          <button onClick={onSearchMap}>검색</button>
+          {/* <button onClick={onSearchMap}>검색</button> */}
+          <button onClick={handleSearch}>검색</button>
+          {/* <button onClick={() => (handleSearch(mapSearch))}>검색</button> */}
         </div>
 
         <div className="content_map"> 
