@@ -7,11 +7,6 @@ import { bindActionCreators } from 'redux';
 
 class StoryContainer extends Component{
 
-  handleModifyStory = (id, story) => {
-    const { storyAction } = this.props;
-    storyAction.modifyStory(id, story);
-  }
-
   handleDeleteStory = (id) => {
     const { storyAction } = this.props;
     storyAction.deleteStory(id);
@@ -24,12 +19,11 @@ class StoryContainer extends Component{
 
   render() {
     const { storyList } = this.props;
-    const { handleModifyStory, handleDeleteStory, handleDetailPopup } = this;
+    const { handleDeleteStory, handleDetailPopup } = this;
 
     return (
       <Story
         storyList = {storyList}
-        onModifyStory = {handleModifyStory}
         onDeleteStory = {handleDeleteStory}
         onDetailPopup = {handleDetailPopup}
       >  

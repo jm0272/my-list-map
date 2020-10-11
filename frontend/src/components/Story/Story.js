@@ -38,7 +38,7 @@ class Story extends Component{
 class StoryItem extends Component{
 
   render() {
-    const { storyData, index, onModifyStory, onDeleteStory, onDetailPopup } = this.props;
+    const { storyData, index, onDeleteStory, onDetailPopup } = this.props;
     console.log('StoryItem component ', this.props);
 
     return (
@@ -57,19 +57,11 @@ class StoryItem extends Component{
         <div>
           <span>
             <button onClick={()=>{
-              console.log('수정');
-              onModifyStory();
-            }}>수정
-            </button>
-          </span>
-          <span>
-            <button onClick={()=>{
               console.log('삭제');
               onDeleteStory();
             }}>삭제
             </button>
           </span>
-          &nbsp;
         </div>
       </div>
       

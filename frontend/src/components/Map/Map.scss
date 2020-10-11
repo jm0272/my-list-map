@@ -1,4 +1,4 @@
-.conten_map {
+.content_map {
   /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -8,14 +8,25 @@
   flex: 1;
 
   /* Extra Styles: */
-  padding: 1rem;
   margin: 1rem;
-  padding: 0.5rem;
+  margin: 1rem;
   background: #eeeeee;
-  padding-bottom: 56px;
 }
 
 .map_area {
-  widows: 500px;
-  height: 500px;
+  //width: 80px;
+  height: 600px;
+  border-style: groove;
+}
+
+.search_map {
+  margin : 10px;
+  text-align: center;
+  input {
+    width : 60%;
+    margin-right: 10px;
+  }
+  button {
+    width : 20%;
+  }
 }

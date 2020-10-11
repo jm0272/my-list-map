@@ -3,9 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import RestoreIcon from "@material-ui/icons/Restore";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+
+
+import ListIcon from '@material-ui/icons/List';
+import MapIcon from '@material-ui/icons/Map';
+
 import "./Footer.scss";
 
 const useStyles = makeStyles({
@@ -32,18 +34,18 @@ const Footer = () => {
       className={classes.root}
     >
       <BottomNavigationAction
-        label="Recents"
-        value="recents"
+        label="story"
+        value="story"
         component={Link}
         to={"/"}
-        icon={<RestoreIcon />}
+        icon={<ListIcon />}
       />
       <BottomNavigationAction
-        label="Favorites"
-        value="favorites"
+        label="map"
+        value="map"
         component={Link}
         to={"/map"}
-        icon={<FavoriteIcon />}
+        icon={<MapIcon />}
       />
     </BottomNavigation>
   );

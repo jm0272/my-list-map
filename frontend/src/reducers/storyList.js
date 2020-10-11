@@ -25,7 +25,7 @@ const storyReducer = (state = initialState, action) => {
 
     case types.ADD_STORY : 
       return [
-        ...state,
+      ...state,
         {
           id : ++id,
           title : action.story.title,
